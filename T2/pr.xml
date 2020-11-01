@@ -3,7 +3,7 @@
 <pr>
     <info>
         <key_name>Project Record</key_name>
-        <title>TPC2 DAW 2020</title>
+        <title>TPC3 DAW 2020</title>
         <subtitle>DTD e XML</subtitle>
         <begin_date>Outubro 2020</begin_date>
         <end_date>Outubro 2020</end_date>
@@ -25,11 +25,13 @@
         <words>Exemplo de link no parágrafo <link url="https://google.com"></link></words>
     </abstract>
     <deliverables>
-        <deliverable url="http://www4.di.uminho.pt/~jcr/PROJS/micei2002/guilherme/ped_micei2002.html">Report (HTML version)</deliverable>
-        <deliverable url="http://www4.di.uminho.pt/~jcr/PROJS/micei2002/guilherme/ped_micei2002.xml">Report (XML version)</deliverable>
-        <deliverable url="http://www4.di.uminho.pt/~jcr/PROJS/micei2002/guilherme/ped_micei2002.xsd">XML Schema Definition (XSD)</deliverable>
-        <deliverable url="http://www4.di.uminho.pt/~jcr/PROJS/micei2002/guilherme/schema_doc.html">XML Schema Documentation (HTML)</deliverable>
-        <deliverable url="pr.dtd">Ficheiro DTD do PR</deliverable>
+        <deliverable url="./pr.xml">XML do project record</deliverable>
+        <deliverable url="./pr.xsl">XSL do project record</deliverable>
+        <deliverable url="./pr.html">HTML do project record</deliverable>
+        <deliverable url="./pr.dtd">Ficheiro DTD do PR</deliverable>
+        <deliverable url="./arq.xml">XML dos arqueossitios</deliverable>
+        <deliverable url="./arq.xsl">XSL dos arqueossitios </deliverable>
+        <deliverable url="./site/index.html">indice dos arqueossitios</deliverable>
     </deliverables>
-    <date>24-10-2020</date>
+    <date>29-10-2020</date>
 </pr>

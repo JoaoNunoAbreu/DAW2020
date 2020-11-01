@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT pr (info,workteam,abstract, deliverables, date) >
+
+<!-- INFO -->
+
+<!ELEMENT info (key_name, title, subtitle?, begin_date, end_date, supervisor) >
+
+<!ELEMENT key_name (#PCDATA) >
+<!ELEMENT title (#PCDATA) >
+<!ELEMENT subtitle (#PCDATA) >
+<!ELEMENT begin_date (#PCDATA) >
+<!ELEMENT end_date (#PCDATA) >
+<!ELEMENT supervisor (#PCDATA) >
+
+<!-- WORKTEAM -->
+
+<!ELEMENT workteam (element)+ >
+
+<!ELEMENT element (name,id_number,email,git_link) >
+
+<!ELEMENT name (#PCDATA) >
+<!ELEMENT id_number (#PCDATA) >
+<!ELEMENT email (#PCDATA) >
+<!ELEMENT git_link (#PCDATA) >
+
+<!-- ABSTRACT -->
+
+<!ELEMENT abstract (words)* >
+<!ELEMENT words (#PCDATA|bold|italic|underline|link)* >
+<!ELEMENT bold (#PCDATA|italic|underline|link)* >
+<!ELEMENT italic (#PCDATA|bold|underline|link)* >
+<!ELEMENT underline (#PCDATA|bold|italic|link)* >
+<!ELEMENT link (#PCDATA) >
+
+<!-- DELIVERABLES -->
+
+<!ELEMENT deliverables (deliverable)* >
+<!ELEMENT deliverable (#PCDATA)>
+
+<!-- DATE -->
+
+<!ELEMENT date (#PCDATA) >
+
+
+<!-- ATTRIBUTES -->
+<!ATTLIST supervisor url CDATA #REQUIRED >       
+<!ATTLIST deliverable url CDATA #REQUIRED>
+<!ATTLIST git_link url CDATA #REQUIRED>
+<!ATTLIST link url CDATA #REQUIRED>

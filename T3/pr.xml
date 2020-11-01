@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "pr.dtd">
+<pr>
+    <info>
+        <key_name>XSL</key_name>
+        <title>Geração de Website com transformações XSL</title>
+        <begin_date>28 de Outubro de 2020</begin_date>
+        <end_date>4 de Novembro de 2020</end_date>
+        <supervisor url="http://www4.di.uminho.pt/~jcr/">José Carlos Ramalho</supervisor>
+    </info>
+    <workteam>
+        <element>
+            <name>João Nuno Abreu</name>
+            <id_number>84802</id_number>
+            <email>a84802@alunos.uminho.pt</email>
+            <git_link url="https://github.com/joaonunoabreu/">GitHub</git_link>
+        </element>
+    </workteam>
+    <abstract>
+        <words>Neste projeto o principal objetivo foi a <bold>geração de um website com transformações XSL</bold> a partir de um dataset em XML, tendo uma página principal com o índice geral, e uma página individual para cada registo.</words> 
+        <words> Foi tido me conta a existência de campos vazios para que não fossem exibidas opções em branco na página do registo. Foi também estudada a possibilidade de ter a opção de avançar para páginas seguintes, embora sem sucesso.</words>
+    </abstract>
+    <deliverables>
+        <deliverable url="arq.xsl">Ficheiro XSL</deliverable>
+        <deliverable url="arq.dtd">Ficheiro DTD</deliverable>
+        <deliverable url="site/index.html">Ficheiro HTML</deliverable>
+    </deliverables>
+    <date>29-10-2020</date>
+</pr>
