@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "file:/Users/joaonunoabreu/Desktop/1Semestre/DAW/tpcs/T4/pr.dtd">
+<pr>
+    <meta>
+        <key>DAW_T4</key>
+        <title>Criação de um Server em Node.js</title>
+        <bdate>4 de Novembro de 2020</bdate>
+        <edate>10 de Novembro de 2020</edate>
+        <supervisor url="http://www4.di.uminho.pt/~jcr">José Carlos Ramalho</supervisor>
+    </meta>
+    <team>
+        <member id="a84802">
+            <name>João Nuno Abreu</name>
+            <email>a84802@alunos.uminho.pt</email>
+        </member>
+    </team>
+    <abstract>
+        <p>Este trabalho foi realizado para unidade curricular <i><b>Desenvolvimento de aplicações web</b></i>.</p>
+        <p>Neste trabalho foi desenvolvido um servidor em <b>NodeJs</b> para paginas de um <b>dataset</b> de arqueositios do nordeste portugues.</p>
+    </abstract>
+    <deliverables>
+        <link url="arq.xsl">XSL do dataset</link>
+        <link url="arq.xml">XML do dataset</link>
+        <link url="server.js">Servidor NodeJs</link>
+        <link url="pr.xml">XML do project record</link>
+        <link url="pr.dtd">DTD do project record</link>
+        <link url="/arqs">Páginas web</link>
+        <link url="/arqs/index.hmtl">Índice página web</link>
+    </deliverables>
+</pr>
