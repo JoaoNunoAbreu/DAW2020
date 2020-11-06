@@ -1,5 +1,4 @@
 var http = require('http')
-var url = require('url')
 var fs = require('fs')
 
 http.createServer(function(req,res){
@@ -12,8 +11,9 @@ http.createServer(function(req,res){
         })
     }
     else if (req.url.match(/\/arqs\/arq[0-9]*.html/)){
-        var r = /\d+/
-        var num = req.url.match(r)[0]
+        // Regex para apanhar os números
+        var num = req.url.match(/\d+/)[0]
+        
         fs.readFile("./arqs/arq" + num + ".html",function(err,data){
             res.writeHead(200,{'Content-Type': 'text/html; charset=utf-8'})
             res.write(data)
