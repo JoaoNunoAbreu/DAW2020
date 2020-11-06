@@ -3,7 +3,6 @@ var fs = require('fs')
 
 http.createServer(function(req,res){
     console.log(req.method + " - " + req.url)
-    // Regex para apanhar os números
     if(req.url.match(/\/arqs\/index.html/)){
         fs.readFile("./arqs/index.html",function(err,data){
             res.writeHead(200,{'Content-Type': 'text/html; charset=utf-8'})
