@@ -13,7 +13,7 @@ http.createServer(function(req,res){
     else {
         if(!req.url.includes("favicon")){ // Ignorar favicon
             var nums = req.url.match(/\d+/)
-            if(nums != null)
+            if(nums != null){
                 var num = parseInt(nums[0])
                 if (req.url.match(/\/arqs\/arq[0-9]+.html$/) && num > 0 && num <= 122){
                     fs.readFile("./arqs/arq" + num + ".html",function(err,data){
@@ -22,6 +22,7 @@ http.createServer(function(req,res){
                         res.end()
                     })
                 }
+            }
             else{
                 res.writeHead(200,{'Content-Type': 'text/html; charset=utf-8'})
                 res.write("<p>O URL não corresponde ao esperado.</p>")
