@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "file:/Users/joaonunoabreu/Desktop/1Semestre/DAW/tpcs/T4/pr.dtd">
+<pr>
+    <meta>
+        <key>DAW_T4</key>
+        <title>Criação de um Server em Node.js para servir conteúdo a partir de pedidos GETs</title>
+        <bdate>11 de Novembro de 2020</bdate>
+        <edate>17 de Novembro de 2020</edate>
+        <supervisor url="http://www4.di.uminho.pt/~jcr">José Carlos Ramalho</supervisor>
+    </meta>
+    <team>
+        <member id="a84802">
+            <name>João Nuno Abreu</name>
+            <email>a84802@alunos.uminho.pt</email>
+        </member>
+    </team>
+    <abstract>
+        <p>Este trabalho foi realizado para unidade curricular <i><b>Desenvolvimento de aplicações Web</b></i>.</p>
+        <p>Neste trabalho foi desenvolvido um servidor em <b>NodeJs</b> que serve páginas dinâmicas, sempre que o servidor precisa de informação faz pedidos a um <i>json server</i> sobre um <i>dataset</i> de músicas.</p>
+    </abstract>
+    <deliverables>
+        <link url="server.js">Servidor NodeJs</link>
+        <link url="pr.xml">XML do project record</link>
+    </deliverables>
+</pr>
