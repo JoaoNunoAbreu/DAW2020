@@ -1,10 +1,3 @@
-/*
-    Module Static - to serve static resources in public folder
-    Exports: 
-        Bool recursoEstatico(request) - tells if someone is asking a static resource
-        Data sirvoRecursoEstatico(req, res) - returns the resource
-*/
-
 var fs = require('fs')
 
 function recursoEstatico(request){

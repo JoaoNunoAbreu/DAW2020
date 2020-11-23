@@ -21,14 +21,14 @@
       "category": "sdb"
     },
     {
+      "id": 3,
       "title": "My third task",
       "description": "Ola",
-      "due_date": "2020-11-25T16:55",
       "person": "João Abreu",
       "category": "teste",
-      "creation_date": "2020-11-21T16:55",
-      "done": "false",
-      "id": 3
+      "creation_date": "2020-11-23T14:29",
+      "due_date": "2020-11-25T16:55",
+      "done": "true"
     },
     {
       "title": "My 4th task",

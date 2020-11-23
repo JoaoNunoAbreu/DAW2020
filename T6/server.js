@@ -87,6 +87,7 @@ function geraPagTarefas(tarefas, d){
             <div class="w3-container w3-teal">
                 <h2>Lista de Tarefas</h2>
             </div>
+            <center><u><h3>Tarefas por fazer</u></h3></center>
             <table class="w3-table w3-bordered">
                 <tr>
                     <th>Título</th>
@@ -94,12 +95,11 @@ function geraPagTarefas(tarefas, d){
                     <th>Categoria</th>
                     <th>Data de criação</th>
                     <th>Data de entrega</th>
-                    <th>Feito</th>
                     <th>Apagar</th>
                 </tr>
   `
     tarefas.forEach(t => {
-        if(t.done == "true"){
+        if(t.done == "false"){
             pagHTML += `
                 <tr>
                     <td><a href="/tasks/${t.id}">${t.title}</td>
@@ -107,7 +107,6 @@ function geraPagTarefas(tarefas, d){
                     <td>${t.category}</td>
                     <td>${t.creation_date}</td>    
                     <td>${t.due_date}</td>
-                    <td>${t.done}</td>
                     <td>
                         <button onclick="window.location.href='http://localhost:7778/tasks/${t.id}/delete';">
                             Apagar
@@ -119,7 +118,7 @@ function geraPagTarefas(tarefas, d){
   });
     pagHTML += `
             </table>
-            <hr>
+            <center><h3><u>Tarefas feitas</u></h3></center>
             <table class="w3-table w3-bordered">
                 <tr>
                     <th>Título</th>
@@ -127,12 +126,11 @@ function geraPagTarefas(tarefas, d){
                     <th>Categoria</th>
                     <th>Data de criação</th>
                     <th>Data de entrega</th>
-                    <th>Feito</th>
                     <th>Editar</th>
                 </tr>
     `
     tarefas.forEach(t => {
-        if(t.done == "false"){
+        if(t.done == "true"){
             pagHTML += `
                 <tr>
                     <td><a href="/tasks/${t.id}">${t.title}</td>
@@ -140,7 +138,6 @@ function geraPagTarefas(tarefas, d){
                     <td>${t.category}</td>
                     <td>${t.creation_date}</td>    
                     <td>${t.due_date}</td>
-                    <td>${t.done}</td>
                     <td>
                         <button onclick="window.location.href='http://localhost:7778/tasks/${t.id}/edit';">
                             Editar
@@ -246,7 +243,7 @@ function geraFormTask( d ){
             </form>
 
             <footer class="w3-container w3-teal">
-                <address>Gerado por João Abreu :: DAW2020 em ${d}</address>
+                <address>Gerado por João Abreu :: DAW2020 em ${d} - [<a href="/">Voltar</a>]</address>
             </footer>
         </body>
     </html>
@@ -300,7 +297,7 @@ function geraForm2Task(t,d){
             </form>
 
             <footer class="w3-container w3-teal">
-                <address>Gerado por João Abreu :: DAW2020 em ${d}</address>
+                <address>Gerado por João Abreu :: DAW2020 em ${d} - [<a href="/">Voltar</a>]</address>
             </footer>
         </body>
     </html>
