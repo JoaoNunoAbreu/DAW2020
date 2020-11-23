@@ -95,7 +95,7 @@ function geraPagTarefas(tarefas, d){
                     <th>Categoria</th>
                     <th>Data de criação</th>
                     <th>Data de entrega</th>
-                    <th>Apagar</th>
+                    <th>Editar</th>
                 </tr>
   `
     tarefas.forEach(t => {
@@ -126,7 +126,7 @@ function geraPagTarefas(tarefas, d){
                     <th>Categoria</th>
                     <th>Data de criação</th>
                     <th>Data de entrega</th>
-                    <th>Editar</th>
+                    <th>Apagar</th>
                 </tr>
     `
     tarefas.forEach(t => {
@@ -139,7 +139,7 @@ function geraPagTarefas(tarefas, d){
                     <td>${t.creation_date}</td>    
                     <td>${t.due_date}</td>
                     <td>
-                        <button onclick="window.location.href='http://localhost:7778/tasks/${t.id}/delete';">
+                        <button onclick="location.href='http://localhost:7778/tasks/${t.id}/delete'" type="button">
                             Apagar
                         </button>
                     </td>   
@@ -376,7 +376,6 @@ var tarefasServer = http.createServer(function (req, res) {
                     var idtarefa = req.url.split("/")[2]
                     axios.delete("http://localhost:3000/tasks/" + idtarefa)
                     .then( response => {
-                        let a = response.data
                         res.writeHead(200, {'Content-Type': 'text/html;charset=utf-8'})
                         res.write(geraDeleteTask(d))
                         res.end()
