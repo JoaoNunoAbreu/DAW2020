@@ -28,7 +28,7 @@ function geraPostConfirm( t, d){
         <title>POST receipt: ${t.id}</title>
         <meta charset="utf-8"/>
         <link rel="icon" href="favicon.png"/>
-        <link rel="stylesheet" href="w3.css"/>
+        <link rel="stylesheet" href="../w3.css"/>
     </head>
     <body>
         <div class="w3-card-4">
@@ -56,7 +56,7 @@ function geraDeleteTask(d){
         <title>DELETE receipt</title>
         <meta charset="utf-8"/>
         <link rel="icon" href="favicon.png"/>
-        <link rel="stylesheet" href="w3.css"/>
+        <link rel="stylesheet" href="../w3.css"/>
     </head>
     <body>
         <div class="w3-card-4">
@@ -81,7 +81,7 @@ function geraPagTarefas(tarefas, d){
             <title>Lista de tarefas</title>
             <meta charset="utf-8"/>
             <link rel="icon" href="favicon.png"/>
-            <link rel="stylesheet" href="w3.css"/>
+            <link rel="stylesheet" href="../w3.css"/>
         </head>
         <body>
             <div class="w3-container w3-teal">
@@ -108,8 +108,8 @@ function geraPagTarefas(tarefas, d){
                     <td>${t.creation_date}</td>    
                     <td>${t.due_date}</td>
                     <td>
-                        <button onclick="window.location.href='http://localhost:7778/tasks/${t.id}/delete';">
-                            Apagar
+                        <button onclick="window.location.href='http://localhost:7778/tasks/${t.id}/edit';">
+                            Editar
                         </button>
                     </td>
                 </tr>
@@ -139,10 +139,10 @@ function geraPagTarefas(tarefas, d){
                     <td>${t.creation_date}</td>    
                     <td>${t.due_date}</td>
                     <td>
-                        <button onclick="window.location.href='http://localhost:7778/tasks/${t.id}/edit';">
-                            Editar
+                        <button onclick="window.location.href='http://localhost:7778/tasks/${t.id}/delete';">
+                            Apagar
                         </button>
-                    </td>
+                    </td>   
                 </tr>
             `
         }
@@ -207,7 +207,7 @@ function geraFormTask( d ){
             <title>Registo de uma tarefa</title>
             <meta charset="utf-8"/>
             <link rel="icon" href="favicon.png"/>
-            <link rel="stylesheet" href="w3.css"/>
+            <link rel="stylesheet" href="../w3.css"/>
         </head>
         <body>
         
@@ -257,7 +257,7 @@ function geraForm2Task(t,d){
             <title>Alteração da tarefa: ${t.id}</title>
             <meta charset="utf-8"/>
             <link rel="icon" href="favicon.png"/>
-            <link rel="stylesheet" href="w3.css"/>
+            <link rel="stylesheet" href="../w3.css"/>
         </head>
         <body>
         
@@ -383,7 +383,7 @@ var tarefasServer = http.createServer(function (req, res) {
                     })
                     .catch(function(erro){
                         res.writeHead(200, {'Content-Type': 'text/html;charset=utf-8'})
-                        res.write("<p>Não foi possível obter o registo da tarefa...</p>")
+                        res.write("<p>Não foi possível apagar a tarefa...</p>")
                         res.end()
                     })
                 }
