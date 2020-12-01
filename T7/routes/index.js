@@ -14,18 +14,18 @@ router.get('/students', function(req, res, next) {
     .catch(err => res.render('error',{error: err}))
 });
 
-// GET do aluno
-router.get(/\/students\/:[A|PG][0-9]+/, function(req, res) {
-  var id = req.url.split(":")[1]
-  Student.lookup(id)
-    .then(stu => res.render('student',{student: stu}))
-    .catch(err => res.render('error',{error: err}))
-});
-
 // Registar um aluno
 router.get('/students/registar', function(req, res){
   res.render('regist',{title: 'Registo de Aluno'})
 })
+
+// GET do aluno
+router.get("/students/:id", function(req, res) {
+  var id = req.params.id.substring(1)
+  Student.lookup(id)
+    .then(stu => res.render('student',{student: stu}))
+    .catch(err => res.render('error',{error: err}))
+});
 
 // POST de aluno
 router.post('/students', function(req,res) {
@@ -34,15 +34,15 @@ router.post('/students', function(req,res) {
 })
 
 // DELETE de um aluno
-router.get(/\/students\/delete\/:[A|PG][0-9]+/, function(req, res) {
-  var id = req.url.split(":")[1]
+router.get("/students/delete/:id", function(req, res) {
+  var id = req.params.id.substring(1)
   Student.remove(id)
   res.redirect('/students')
 });
 
 // Editar um aluno
-router.get(/\/students\/edit\/:[A|PG][0-9]+/, (req, res) => {
-  var id = req.url.split(":")[1]
+router.get("/students/edit/:id", (req, res) => {
+  var id = req.params.id.substring(1)
   Student.lookup(id)
     .then(data => res.render('edit',{student: data}))
     .catch(err => res.render('error', {error: err}))
