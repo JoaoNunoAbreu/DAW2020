@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "file:/Users/joaonunoabreu/Desktop/1Semestre/DAW/tpcs/T4/pr.dtd">
+<pr>
+    <meta>
+        <key>DAW_T7</key>
+        <title>Criação de um servidor em Express.js para servir numa SPA conteúdo guardado numa base de dados MongoDB</title>
+        <bdate>2 de Dezembro de 2020</bdate>
+        <edate>9 de Dezembro de 2020</edate>
+        <supervisor url="http://www4.di.uminho.pt/~jcr">José Carlos Ramalho</supervisor>
+    </meta>
+    <team>
+        <member id="a84802">
+            <name>João Nuno Abreu</name>
+            <email>a84802@alunos.uminho.pt</email>
+        </member>
+    </team>
+    <abstract>
+        <p>Este trabalho foi realizado para unidade curricular <i><b>Desenvolvimento de aplicações Web</b></i>.</p>
+        <p>Neste trabalho foi utilizado o sistema de upload de ficheiros, sendo o principal objetivo a implementação da possibilidade de fazer upload de múltiplos ficheiros de uma só vez.</p>
+    </abstract>
+    <deliverables>
+        <link url="server.js">Servidor</link>
+        <link url="html-template.js/">Funções JavaScript utilizadas pelo servidor</link>
+        <link url="/public/imagens.js/">Funções JavaScript utilizadas pelo cliente</link>
+    </deliverables>
+</pr>
